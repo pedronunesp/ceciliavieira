@@ -17,7 +17,7 @@ export const Gallery = () => {
         src={floral}
         alt=""
         aria-hidden="true"
-        className="absolute top-10 -right-24 w-56 opacity-50 animate-sway-slow pointer-events-none"
+        className="absolute top-10 -right-24 w-56 opacity-50 animate-sway-slow pointer-events-none mix-blend-multiply"
       />
 
 
@@ -54,7 +54,7 @@ export const Gallery = () => {
                   src={floral}
                   alt=""
                   aria-hidden="true"
-                  className={`absolute w-24 opacity-80 animate-sway pointer-events-none ${
+                  className={`absolute w-24 opacity-80 animate-sway pointer-events-none mix-blend-multiply ${
                     i % 2 === 0 ? "-bottom-6 -right-8" : "-top-6 -left-8"
                   }`}
                   style={{ transform: i % 2 === 0 ? "rotate(20deg)" : "rotate(-20deg) scaleX(-1)" }}

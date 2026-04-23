@@ -15,7 +15,7 @@ export const EventDetails = () => {
         src={floral}
         alt=""
         aria-hidden="true"
-        className="absolute -bottom-10 -left-20 w-64 opacity-60 animate-sway pointer-events-none"
+        className="absolute -bottom-10 -left-20 w-64 opacity-60 animate-sway pointer-events-none mix-blend-multiply"
       />
 
       <Reveal variant="blur" className="text-center mb-12">

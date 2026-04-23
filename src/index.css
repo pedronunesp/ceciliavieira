@@ -56,8 +56,7 @@
     --pearl: 30 50% 96%;
     --ink: 15 30% 22%;
 
-    /* Gradients */
-    --gradient-pearl: linear-gradient(180deg, hsl(350 60% 95%) 0%, hsl(340 50% 90%) 50%, hsl(330 40% 86%) 100%);
+    --gradient-pearl: radial-gradient(ellipse at top, hsl(350 40% 96%) 0%, hsl(350 30% 92%) 60%, hsl(350 25% 88%) 100%);
     --gradient-blush: linear-gradient(135deg, hsl(350 60% 92%) 0%, hsl(25 50% 90%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(42 70% 78%) 0%, hsl(35 55% 55%) 50%, hsl(32 50% 45%) 100%);
     --gradient-envelope: linear-gradient(160deg, hsl(350 50% 88%) 0%, hsl(25 40% 82%) 50%, hsl(35 45% 70%) 100%);
@@ -139,7 +138,7 @@
   }
 
   .paper-texture {
-    background-color: hsl(var(--pearl));
+    background-color: transparent;
     background-image:
       radial-gradient(hsl(15 30% 20% / 0.025) 1px, transparent 1px),
       radial-gradient(hsl(15 30% 20% / 0.02) 1px, transparent 1px);

@@ -69,13 +69,13 @@ export const Hero = () => {
           src={floral}
           alt=""
           aria-hidden="true"
-          className="absolute top-0 -left-20 w-64 md:w-80 opacity-70 animate-sway-slow pointer-events-none"
+          className="absolute top-0 -left-20 w-64 md:w-80 opacity-70 animate-sway-slow pointer-events-none mix-blend-multiply"
         />
         <img
           src={floral}
           alt=""
           aria-hidden="true"
-          className="absolute -bottom-20 -right-16 w-64 md:w-80 opacity-70 animate-sway pointer-events-none"
+          className="absolute -bottom-20 -right-16 w-64 md:w-80 opacity-70 animate-sway pointer-events-none mix-blend-multiply"
           style={{ transform: "scaleX(-1)" }}
         />
 
