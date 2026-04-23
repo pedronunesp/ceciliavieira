@@ -10,21 +10,17 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
   const [stage, setStage] = useState<"idle" | "opening" | "rising" | "done">("idle");
   const [hide, setHide] = useState(false);
 
-  // Auto open after 2s
-  useEffect(() => {
-    const t = setTimeout(() => triggerOpen(), 2000);
-    return () => clearTimeout(t);
-  }, []);
+  // Auto open removed so it starts closed
 
   const triggerOpen = () => {
     setStage((s) => {
       if (s !== "idle") return s;
       // Sequence: flap opens (slow) → card rises → brasão emerges → envelope flies away
-      setTimeout(() => setStage("rising"), 3200);
+      setTimeout(() => setStage("rising"), 4500);
       setTimeout(() => {
         onOpened();
-      }, 4800);
-      setTimeout(() => setHide(true), 5800);
+      }, 6500);
+      setTimeout(() => setHide(true), 7500);
       return "opening";
     });
   };
@@ -90,7 +86,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
         >
           {/* Back of envelope */}
           <div
-            className="absolute inset-0 rounded-[3px] overflow-hidden"
+            className="absolute inset-0 rounded-[3px] overflow-hidden paper-texture"
             style={{
               background:
                 "linear-gradient(155deg, hsl(25 35% 78%) 0%, hsl(20 30% 72%) 100%)",
@@ -111,7 +107,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
 
           {/* Inner card (slides up when opened) */}
           <div
-            className={`absolute inset-x-3 bottom-3 top-[18%] rounded-[2px] overflow-hidden transition-all duration-[1800ms] paper-texture ${
+            className={`absolute inset-x-3 bottom-3 top-[18%] rounded-[2px] overflow-hidden transition-all duration-[2400ms] paper-texture ${
               isOpen ? "translate-y-[-22%]" : "translate-y-0"
             }`}
             style={{
@@ -120,7 +116,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
               boxShadow:
                 "0 8px 25px -8px hsl(15 30% 20% / 0.35), inset 0 0 30px hsl(35 40% 85% / 0.4)",
               transitionTimingFunction: "cubic-bezier(0.65, 0, 0.35, 1)",
-              transitionDelay: isOpen ? "1400ms" : "0ms",
+              transitionDelay: isOpen ? "2000ms" : "0ms",
               transform: `translateZ(2px) ${isOpen ? "translateY(-22%)" : ""}`,
             }}
           >
@@ -142,7 +138,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
 
           {/* Front pocket (lower triangular flap, static) */}
           <div
-            className="absolute inset-x-0 bottom-0 h-[55%]"
+            className="absolute inset-x-0 bottom-0 h-[55%] paper-texture"
             style={{
               background:
                 "linear-gradient(170deg, hsl(25 38% 76%) 0%, hsl(20 32% 68%) 100%)",
@@ -154,7 +150,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
 
           {/* Top flap (animated open) */}
           <div
-            className="absolute inset-x-0 top-0 h-[58%] envelope-flap-pro"
+            className="absolute inset-x-0 top-0 h-[58%] envelope-flap-pro paper-texture"
             style={{
               background:
                 "linear-gradient(180deg, hsl(28 42% 82%) 0%, hsl(22 35% 74%) 100%)",
@@ -163,7 +159,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
                 "inset 0 -6px 18px hsl(15 30% 25% / 0.25), 0 2px 8px hsl(15 30% 25% / 0.15)",
               transformOrigin: "top center",
               transform: isOpen ? "rotateX(-180deg)" : "rotateX(0deg)",
-              transition: "transform 2.4s cubic-bezier(0.65, 0, 0.35, 1)",
+              transition: "transform 3.5s cubic-bezier(0.65, 0, 0.35, 1)",
               backfaceVisibility: "hidden",
             }}
           >
@@ -226,15 +222,15 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
           <img
             src={brasao}
             alt="Brasão Cecília Vieira"
-            className={`absolute left-1/2 top-1/2 -translate-x-1/2 w-[80%] transition-all pointer-events-none ${
+            className={`absolute left-1/2 top-1/2 -translate-x-1/2 w-[90%] transition-all pointer-events-none ${
               isOpen
                 ? "opacity-100 -translate-y-[55%] scale-100"
                 : "opacity-0 -translate-y-[40%] scale-75"
             }`}
             style={{
-              transitionDuration: "2000ms",
+              transitionDuration: "2500ms",
               transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
-              transitionDelay: isOpen ? "1800ms" : "0ms",
+              transitionDelay: isOpen ? "2500ms" : "0ms",
               filter: "drop-shadow(0 8px 16px hsl(350 50% 40% / 0.25))",
               zIndex: 6,
             }}

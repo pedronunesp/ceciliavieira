@@ -12,14 +12,14 @@ const buttons = [
   {
     icon: MapPin,
     label: "Ver Localização",
-    sub: "Google Maps",
-    href: "https://maps.google.com/?q=Espaço+Belle+Époque+São+Paulo",
+    sub: "Toth Eventos",
+    href: "https://maps.google.com/?q=Toth+eventos,+Av.+Otacílio+Negrão+de+Lima,+7200+-+Bandeirantes+(Pampulha)",
   },
   {
     icon: Instagram,
     label: "Instagram",
-    sub: "@cecilia.vieira",
-    href: "https://instagram.com/cecilia.vieira",
+    sub: "@xv_ceciliav",
+    href: "https://instagram.com/xv_ceciliav",
   },
 ];
 

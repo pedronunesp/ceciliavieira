@@ -41,7 +41,7 @@ export const Hero = () => {
           <img
             src={brasao}
             alt="Brasão Cecília Vieira — Quinze Anos"
-            className="relative w-[78%] max-w-[300px] animate-sway-slow"
+            className="relative w-[90%] max-w-[400px] animate-sway-slow"
             style={{
               filter:
                 "drop-shadow(0 0 18px hsl(42 85% 78% / 0.85)) drop-shadow(0 0 38px hsl(42 80% 75% / 0.55)) drop-shadow(0 0 60px hsl(350 60% 80% / 0.35)) drop-shadow(0 10px 22px hsl(350 50% 40% / 0.18))",

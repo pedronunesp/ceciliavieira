@@ -1,11 +1,11 @@
-import { Calendar, Clock, MapPin } from "lucide-react";
+import { Calendar, Clock, MapPin, Shirt } from "lucide-react";
 import { Reveal } from "./Reveal";
 import floral from "@/assets/floral-corner.png";
 
 const details = [
-  { icon: Calendar, label: "Sábado", value: "15 de Março, 2026" },
-  { icon: Clock, label: "Recepção", value: "20h00" },
-  { icon: MapPin, label: "Local", value: "Espaço Belle Époque", sub: "Av. das Rosas, 1500 — São Paulo" },
+  { icon: Calendar, label: "Sábado", value: "29 de Maio, 2026", sub: "22:00 às 04:00" },
+  { icon: MapPin, label: "Local", value: "Toth Eventos", sub: "Av. Otacílio Negrão de Lima, 7200 - Bandeirantes (Pampulha)" },
+  { icon: Shirt, label: "Dress Code", value: "Esporte Fino", sub: "Por favor, evite roupas rosas, pois são exclusivas da aniversariante." },
 ];
 
 export const EventDetails = () => {
