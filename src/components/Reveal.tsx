@@ -5,10 +5,9 @@ interface RevealProps {
   className?: string;
   variant?: "fade" | "blur";
   delay?: number;
-  as?: keyof JSX.IntrinsicElements;
 }
 
-export const Reveal = ({ children, className = "", variant = "fade", delay = 0, as: Tag = "div" }: RevealProps) => {
+export const Reveal = ({ children, className = "", variant = "fade", delay = 0 }: RevealProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -31,12 +30,8 @@ export const Reveal = ({ children, className = "", variant = "fade", delay = 0, 
   const baseClass = variant === "blur" ? "reveal-blur" : "reveal";
 
   return (
-    <Tag
-      // @ts-expect-error - dynamic tag with ref
-      ref={ref}
-      className={`${baseClass} ${visible ? "in-view" : ""} ${className}`}
-    >
+    <div ref={ref} className={`${baseClass} ${visible ? "in-view" : ""} ${className}`}>
       {children}
-    </Tag>
+    </div>
   );
 };
