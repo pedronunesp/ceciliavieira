@@ -19,12 +19,12 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
   const triggerOpen = () => {
     setStage((s) => {
       if (s !== "idle") return s;
-      // Sequence: flap opens → card rises → reveal site
-      setTimeout(() => setStage("rising"), 1400);
+      // Sequence: flap opens (slow) → card rises → brasão emerges → envelope flies away
+      setTimeout(() => setStage("rising"), 3200);
       setTimeout(() => {
         onOpened();
-      }, 2600);
-      setTimeout(() => setHide(true), 3600);
+      }, 4800);
+      setTimeout(() => setHide(true), 5800);
       return "opening";
     });
   };
