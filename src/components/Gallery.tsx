@@ -20,13 +20,7 @@ export const Gallery = () => {
         className="absolute top-10 -right-24 w-56 opacity-50 animate-sway-slow pointer-events-none"
       />
 
-      <Reveal variant="blur" className="text-center mb-16">
-        <p className="font-display text-[10px] tracking-[0.5em] text-gold-deep/80 mb-3">
-          ENSAIO
-        </p>
-        <p className="font-script text-4xl text-gold-deep mb-2">retratos</p>
-        <div className="gold-divider w-24 mx-auto" />
-      </Reveal>
+
 
       <div className="max-w-md mx-auto space-y-12">
         {photos.map((photo, i) => (
@@ -93,8 +87,7 @@ export const Gallery = () => {
                 <Reveal variant="blur">
                   <div className="gold-divider w-20 mx-auto mb-8" />
                   <p className="font-serif-elegant italic text-2xl text-ink/80 leading-relaxed">
-                    "A magia desta data só será completa<br />
-                    com você ao meu lado."
+                    "Vem celebrar esse sonho comigo!"
                   </p>
                 </Reveal>
               </div>
