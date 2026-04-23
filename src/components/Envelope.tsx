@@ -152,14 +152,17 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
             }}
           >
             {/* Elegant embroidered text on envelope */}
-            <div className="flex flex-col items-center justify-end mt-12" style={{ transform: "translateZ(1px)" }}>
+            <div className="flex flex-col items-center justify-end mt-10" style={{ transform: "translateZ(1px)" }}>
               <p 
-                className="font-script text-3xl text-gold-deep" 
-                style={{ textShadow: "1px 1px 1px rgba(255,255,255,0.4), -1px -1px 1px rgba(0,0,0,0.1)" }}
+                className="font-script text-4xl text-gold-deep" 
+                style={{ textShadow: "1px 1px 1px rgba(255,255,255,0.5), -1px -1px 1px rgba(0,0,0,0.08)" }}
               >
                 Cecília Vieira
               </p>
-              <p className="font-display text-[9px] tracking-[0.4em] text-ink/70 mt-1 uppercase text-center w-full">
+              <p 
+                className="font-display text-xs tracking-[0.4em] text-gold-deep mt-2 uppercase text-center w-full font-bold"
+                style={{ textShadow: "1px 1px 0px rgba(255,255,255,0.4)" }}
+              >
                 Te convida
               </p>
             </div>
