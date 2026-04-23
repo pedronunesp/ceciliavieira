@@ -39,7 +39,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
       className={`fixed inset-0 z-50 transition-opacity duration-700 ${
         isRising ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
-      style={{ background: "radial-gradient(ellipse at center, hsl(350 45% 97%) 0%, hsl(350 35% 91%) 60%, hsl(350 30% 84%) 100%)" }}
+      style={{ background: "radial-gradient(ellipse at center, hsl(350 55% 95%) 0%, hsl(345 45% 88%) 60%, hsl(340 40% 80%) 100%)" }}
     >
       {/* Ambient golden glow */}
       <div
@@ -116,7 +116,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
             }`}
             style={{
               background:
-                "linear-gradient(180deg, hsl(30 50% 98%) 0%, hsl(30 45% 95%) 100%)",
+                "linear-gradient(180deg, hsl(350 35% 96%) 0%, hsl(345 30% 90%) 100%)",
               boxShadow:
                 "0 8px 25px -8px hsl(15 30% 20% / 0.35), inset 0 0 30px hsl(35 40% 85% / 0.4)",
               transitionTimingFunction: "cubic-bezier(0.65, 0, 0.35, 1)",
