@@ -10,7 +10,11 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
   const [stage, setStage] = useState<"idle" | "opening" | "rising" | "done">("idle");
   const [hide, setHide] = useState(false);
 
-  // Auto open removed so it starts closed
+  // Auto open after 2s
+  useEffect(() => {
+    const t = setTimeout(() => triggerOpen(), 2500); // 2.5s gives time to read
+    return () => clearTimeout(t);
+  }, []);
 
   const triggerOpen = () => {
     setStage((s) => {
@@ -35,7 +39,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
       className={`fixed inset-0 z-50 transition-opacity duration-700 ${
         isRising ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
-      style={{ background: "radial-gradient(ellipse at center, hsl(350 45% 92%) 0%, hsl(25 40% 84%) 60%, hsl(15 30% 70%) 100%)" }}
+      style={{ background: "radial-gradient(ellipse at center, hsl(350 40% 98%) 0%, hsl(25 35% 92%) 60%, hsl(15 25% 85%) 100%)" }}
     >
       {/* Ambient golden glow */}
       <div
@@ -94,12 +98,12 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
                 "0 30px 60px -20px hsl(15 30% 25% / 0.45), 0 10px 20px -10px hsl(15 30% 25% / 0.3), inset 0 0 40px hsl(15 25% 35% / 0.15)",
             }}
           >
-            {/* Subtle paper grain */}
+            {/* Subtle paper grain / Stronger texture for the envelope */}
             <div
-              className="absolute inset-0 opacity-30"
+              className="absolute inset-0 opacity-40 mix-blend-multiply"
               style={{
                 backgroundImage:
-                  "radial-gradient(hsl(15 30% 20% / 0.08) 1px, transparent 1px)",
+                  "radial-gradient(hsl(15 30% 15% / 0.15) 1px, transparent 1px)",
                 backgroundSize: "3px 3px",
               }}
             />
@@ -138,7 +142,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
 
           {/* Front pocket (lower triangular flap, static) */}
           <div
-            className="absolute inset-x-0 bottom-0 h-[55%] paper-texture"
+            className="absolute inset-x-0 bottom-0 h-[55%] paper-texture flex flex-col items-center justify-end pb-6 opacity-90"
             style={{
               background:
                 "linear-gradient(170deg, hsl(25 38% 76%) 0%, hsl(20 32% 68%) 100%)",
@@ -146,7 +150,20 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
               boxShadow: "inset 0 4px 12px hsl(15 30% 25% / 0.2)",
               transform: "translateZ(4px)",
             }}
-          />
+          >
+            {/* Elegant embroidered text on envelope */}
+            <div className="flex flex-col items-center justify-end mt-12" style={{ transform: "translateZ(1px)" }}>
+              <p 
+                className="font-script text-3xl text-gold-deep" 
+                style={{ textShadow: "1px 1px 1px rgba(255,255,255,0.4), -1px -1px 1px rgba(0,0,0,0.1)" }}
+              >
+                Cecília Vieira
+              </p>
+              <p className="font-display text-[9px] tracking-[0.4em] text-ink/70 mt-1 uppercase text-center w-full">
+                Te convida
+              </p>
+            </div>
+          </div>
 
           {/* Top flap (animated open) */}
           <div
@@ -240,12 +257,15 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
 
       {/* Subtle hint text */}
       <div
-        className={`absolute bottom-16 left-1/2 -translate-x-1/2 transition-opacity duration-700 ${
+        className={`absolute bottom-16 left-1/2 -translate-x-1/2 transition-opacity duration-700 text-center ${
           isOpen ? "opacity-0" : "opacity-100"
         }`}
       >
-        <p className="font-display text-[10px] tracking-[0.5em] text-ink/50 animate-pulse whitespace-nowrap">
-          ABRINDO CONVITE
+        <p className="font-script text-3xl text-gold-deep animate-pulse mb-1">
+          Toque para abrir
+        </p>
+        <p className="font-display text-[10px] tracking-[0.4em] text-ink/60 uppercase whitespace-nowrap">
+          Convite Interativo
         </p>
       </div>
     </div>
