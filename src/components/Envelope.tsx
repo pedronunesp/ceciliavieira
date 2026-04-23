@@ -232,9 +232,9 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
                 : "opacity-0 -translate-y-[40%] scale-75"
             }`}
             style={{
-              transitionDuration: "1200ms",
+              transitionDuration: "2000ms",
               transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
-              transitionDelay: isOpen ? "900ms" : "0ms",
+              transitionDelay: isOpen ? "1800ms" : "0ms",
               filter: "drop-shadow(0 8px 16px hsl(350 50% 40% / 0.25))",
               zIndex: 6,
             }}
