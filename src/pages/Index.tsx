@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Envelope } from "@/components/Envelope";
 import { Hero } from "@/components/Hero";
 import { Gallery } from "@/components/Gallery";
-import { Storytelling } from "@/components/Storytelling";
 import { EventDetails } from "@/components/EventDetails";
 import { Actions } from "@/components/Actions";
 import { Finale } from "@/components/Finale";
@@ -35,7 +34,6 @@ const Index = () => {
       >
         <Hero />
         <Gallery />
-        <Storytelling />
         <EventDetails />
         <Actions />
         <Finale />
