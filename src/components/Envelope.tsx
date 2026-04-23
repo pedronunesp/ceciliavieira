@@ -19,12 +19,12 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
   const triggerOpen = () => {
     setStage((s) => {
       if (s !== "idle") return s;
-      // Sequence: flap opens → card rises → reveal site
-      setTimeout(() => setStage("rising"), 1400);
+      // Sequence: flap opens (slow) → card rises → brasão emerges → envelope flies away
+      setTimeout(() => setStage("rising"), 3200);
       setTimeout(() => {
         onOpened();
-      }, 2600);
-      setTimeout(() => setHide(true), 3600);
+      }, 4800);
+      setTimeout(() => setHide(true), 5800);
       return "opening";
     });
   };
@@ -80,7 +80,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
         style={{ perspective: "1800px" }}
       >
         <div
-          className={`relative w-full max-w-[320px] aspect-[4/5.2] transition-all duration-[1200ms] ${
+          className={`relative w-full max-w-[320px] aspect-[4/5.2] transition-all duration-[1600ms] ${
             isRising ? "translate-y-[-120vh] scale-110" : "translate-y-0 scale-100"
           }`}
           style={{
@@ -111,7 +111,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
 
           {/* Inner card (slides up when opened) */}
           <div
-            className={`absolute inset-x-3 bottom-3 top-[18%] rounded-[2px] overflow-hidden transition-all duration-[1100ms] paper-texture ${
+            className={`absolute inset-x-3 bottom-3 top-[18%] rounded-[2px] overflow-hidden transition-all duration-[1800ms] paper-texture ${
               isOpen ? "translate-y-[-22%]" : "translate-y-0"
             }`}
             style={{
@@ -120,7 +120,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
               boxShadow:
                 "0 8px 25px -8px hsl(15 30% 20% / 0.35), inset 0 0 30px hsl(35 40% 85% / 0.4)",
               transitionTimingFunction: "cubic-bezier(0.65, 0, 0.35, 1)",
-              transitionDelay: isOpen ? "600ms" : "0ms",
+              transitionDelay: isOpen ? "1400ms" : "0ms",
               transform: `translateZ(2px) ${isOpen ? "translateY(-22%)" : ""}`,
             }}
           >
@@ -163,7 +163,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
                 "inset 0 -6px 18px hsl(15 30% 25% / 0.25), 0 2px 8px hsl(15 30% 25% / 0.15)",
               transformOrigin: "top center",
               transform: isOpen ? "rotateX(-180deg)" : "rotateX(0deg)",
-              transition: "transform 1.4s cubic-bezier(0.65, 0, 0.35, 1)",
+              transition: "transform 2.4s cubic-bezier(0.65, 0, 0.35, 1)",
               backfaceVisibility: "hidden",
             }}
           >
@@ -232,9 +232,9 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
                 : "opacity-0 -translate-y-[40%] scale-75"
             }`}
             style={{
-              transitionDuration: "1200ms",
+              transitionDuration: "2000ms",
               transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
-              transitionDelay: isOpen ? "900ms" : "0ms",
+              transitionDelay: isOpen ? "1800ms" : "0ms",
               filter: "drop-shadow(0 8px 16px hsl(350 50% 40% / 0.25))",
               zIndex: 6,
             }}

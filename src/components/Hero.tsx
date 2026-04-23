@@ -38,21 +38,13 @@ export const Hero = () => {
           className="relative mb-6 animate-scale-in opacity-0 w-full flex justify-center"
           style={{ animationDelay: "0.5s" }}
         >
-          {/* Soft halo behind brasão */}
-          <div
-            className="absolute inset-0 m-auto w-72 h-72 rounded-full pointer-events-none animate-glow-pulse"
-            style={{
-              background:
-                "radial-gradient(circle, hsl(42 80% 82% / 0.5) 0%, hsl(350 55% 88% / 0.25) 50%, transparent 75%)",
-            }}
-          />
           <img
             src={brasao}
             alt="Brasão Cecília Vieira — Quinze Anos"
             className="relative w-[78%] max-w-[300px] animate-sway-slow"
             style={{
               filter:
-                "drop-shadow(0 12px 24px hsl(350 50% 40% / 0.2)) drop-shadow(0 4px 8px hsl(35 50% 40% / 0.15))",
+                "drop-shadow(0 0 18px hsl(42 85% 78% / 0.85)) drop-shadow(0 0 38px hsl(42 80% 75% / 0.55)) drop-shadow(0 0 60px hsl(350 60% 80% / 0.35)) drop-shadow(0 10px 22px hsl(350 50% 40% / 0.18))",
             }}
           />
         </div>
