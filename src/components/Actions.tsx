@@ -37,10 +37,10 @@ export const Actions = () => {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`btn-glow group flex items-center gap-4 rounded-2xl px-6 py-4 ${
+              className={`btn-glow group flex items-center gap-4 rounded-2xl px-6 py-5 border ${
                 primary
-                  ? "bg-gold-grad text-pearl shadow-luxe"
-                  : "glass-gold text-ink shadow-soft"
+                  ? "bg-gold-grad text-pearl shadow-luxe border-transparent"
+                  : "glass-gold text-ink shadow-petal border-gold-deep/30"
               }`}
             >
               <div
@@ -51,10 +51,10 @@ export const Actions = () => {
                 <Icon className={`w-5 h-5 ${primary ? "text-pearl" : "text-gold-deep"}`} strokeWidth={1.5} />
               </div>
               <div className="flex-1">
-                <p className={`font-display text-base tracking-wide ${primary ? "text-pearl" : "text-ink"}`}>
+                <p className={`font-display text-xl tracking-wide font-medium ${primary ? "text-pearl" : "text-ink"}`}>
                   {label}
                 </p>
-                <p className={`font-serif-elegant italic text-xs ${primary ? "text-pearl/80" : "text-ink/60"}`}>
+                <p className={`font-serif-elegant italic text-sm ${primary ? "text-pearl/90" : "text-ink/70"}`}>
                   {sub}
                 </p>
               </div>

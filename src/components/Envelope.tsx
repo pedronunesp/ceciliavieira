@@ -10,7 +10,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
   const [stage, setStage] = useState<"idle" | "opening" | "rising" | "done">("idle");
   const [hide, setHide] = useState(false);
 
-  // Auto open after 2s
+  // Auto open after 1s
   useEffect(() => {
     const t = setTimeout(() => triggerOpen(), 1000); // 1s wait before opening
     return () => clearTimeout(t);
@@ -39,7 +39,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
       className={`fixed inset-0 z-50 transition-opacity duration-700 ${
         isRising ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
-      style={{ background: "radial-gradient(ellipse at center, hsl(350 40% 98%) 0%, hsl(25 35% 92%) 60%, hsl(15 25% 85%) 100%)" }}
+      style={{ background: "radial-gradient(ellipse at center, hsl(350 45% 97%) 0%, hsl(350 35% 91%) 60%, hsl(350 30% 84%) 100%)" }}
     >
       {/* Ambient golden glow */}
       <div
@@ -93,9 +93,9 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
             className="absolute inset-0 rounded-[3px] overflow-hidden paper-texture"
             style={{
               background:
-                "linear-gradient(155deg, hsl(25 35% 78%) 0%, hsl(20 30% 72%) 100%)",
+                "linear-gradient(135deg, hsl(350 45% 86%) 0%, hsl(350 40% 78%) 100%)",
               boxShadow:
-                "0 30px 60px -20px hsl(15 30% 25% / 0.45), 0 10px 20px -10px hsl(15 30% 25% / 0.3), inset 0 0 40px hsl(15 25% 35% / 0.15)",
+                "0 30px 60px -20px hsl(350 30% 25% / 0.45), 0 10px 20px -10px hsl(350 30% 25% / 0.3), inset 0 0 40px hsl(350 25% 35% / 0.15)",
             }}
           >
             {/* Subtle paper grain / Stronger texture for the envelope */}
@@ -145,9 +145,9 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
             className="absolute inset-x-0 bottom-0 h-[55%] paper-texture flex flex-col items-center justify-end pb-6 opacity-90"
             style={{
               background:
-                "linear-gradient(170deg, hsl(25 38% 76%) 0%, hsl(20 32% 68%) 100%)",
+                "linear-gradient(170deg, hsl(350 45% 82%) 0%, hsl(350 38% 74%) 100%)",
               clipPath: "polygon(0 30%, 50% 0, 100% 30%, 100% 100%, 0 100%)",
-              boxShadow: "inset 0 4px 12px hsl(15 30% 25% / 0.2)",
+              boxShadow: "inset 0 4px 12px hsl(350 30% 25% / 0.2)",
               transform: "translateZ(4px)",
             }}
           >
@@ -170,10 +170,10 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
             className="absolute inset-x-0 top-0 h-[58%] envelope-flap-pro paper-texture"
             style={{
               background:
-                "linear-gradient(180deg, hsl(28 42% 82%) 0%, hsl(22 35% 74%) 100%)",
+                "linear-gradient(170deg, hsl(350 45% 84%) 0%, hsl(350 40% 76%) 100%)",
               clipPath: "polygon(0 0, 100% 0, 50% 100%)",
               boxShadow:
-                "inset 0 -6px 18px hsl(15 30% 25% / 0.25), 0 2px 8px hsl(15 30% 25% / 0.15)",
+                "inset 0 -6px 18px hsl(350 30% 25% / 0.25), 0 2px 8px hsl(350 30% 25% / 0.15)",
               transformOrigin: "top center",
               transform: isOpen ? "translateZ(-2px) rotateX(-180deg)" : "translateZ(8px) rotateX(0deg)",
               transition: "transform 1.5s cubic-bezier(0.65, 0, 0.35, 1)",

@@ -38,9 +38,9 @@ export const EventDetails = () => {
                 <Icon className="w-5 h-5 text-pearl" strokeWidth={1.5} />
               </div>
               <div className="flex-1">
-                <p className="font-display text-[10px] tracking-[0.3em] text-gold-deep/80 uppercase">{label}</p>
-                <p className="font-serif-elegant text-xl text-ink leading-tight">{value}</p>
-                {sub && <p className="font-serif-elegant italic text-sm text-ink/60 mt-0.5">{sub}</p>}
+                <p className="font-display text-xs tracking-[0.3em] text-gold-deep uppercase font-bold">{label}</p>
+                <p className="font-serif-elegant text-2xl text-ink leading-tight font-medium my-1">{value}</p>
+                {sub && <p className="font-serif-elegant italic text-base text-ink/80 mt-0.5">{sub}</p>}
               </div>
             </div>
           </Reveal>

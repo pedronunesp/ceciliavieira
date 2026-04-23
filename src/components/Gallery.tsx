@@ -71,7 +71,7 @@ export const Gallery = () => {
             {i === 0 && (
               <div className="py-16 text-center">
                 <Reveal variant="blur">
-                  <p className="font-script text-4xl text-gold-deep">— um sonho —</p>
+                  <p className="font-script text-4xl text-gold-deep">— meus 15 anos —</p>
                 </Reveal>
               </div>
             )}
@@ -80,11 +80,9 @@ export const Gallery = () => {
               <div className="py-16 text-center">
                 <Reveal variant="blur">
                   <p className="font-display text-3xl md:text-4xl leading-[1.4] text-ink">
-                    Uma noite para
+                    Um momento mágico
                     <br />
-                    <em className="font-serif-elegant italic text-blush-deep">florescer instantes</em>
-                    <br />
-                    e celebrar a vida.
+                    <em className="font-serif-elegant italic text-blush-deep">para celebrar a vida</em>
                   </p>
                 </Reveal>
               </div>
@@ -94,10 +92,9 @@ export const Gallery = () => {
               <div className="pt-16 pb-8 text-center">
                 <Reveal variant="blur">
                   <div className="gold-divider w-20 mx-auto mb-8" />
-                  <p className="font-serif-elegant italic text-xl text-ink/80 leading-relaxed">
-                    "Quinze rosas desabrocharam,<br />
-                    quinze desejos ao vento.<br />
-                    Vem comigo viver este momento."
+                  <p className="font-serif-elegant italic text-2xl text-ink/80 leading-relaxed">
+                    "A magia desta data só será completa<br />
+                    com você ao meu lado."
                   </p>
                 </Reveal>
               </div>
