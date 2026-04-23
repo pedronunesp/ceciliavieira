@@ -12,7 +12,7 @@ export const Storytelling = () => {
           <p className="font-display text-3xl md:text-4xl leading-[1.4] text-ink mb-6">
             Uma noite para
             <br />
-            <em className="font-serif-elegant italic text-blush-deep">florescer memórias</em>
+            <em className="font-serif-elegant italic text-blush-deep">florescer instantes</em>
             <br />
             e celebrar a vida.
           </p>

@@ -7,7 +7,7 @@ import { Reveal } from "./Reveal";
 const photos = [
   { src: photo1, alt: "Cecília em vestido rosa florido", caption: "delicadeza" },
   { src: photo2, alt: "Cecília entre peônias", caption: "essência" },
-  { src: photo3, alt: "Cecília iluminada por velas", caption: "magia" },
+  { src: photo3, alt: "Cecília iluminada por velas", caption: "encanto" },
 ];
 
 export const Gallery = () => {
@@ -21,7 +21,10 @@ export const Gallery = () => {
       />
 
       <Reveal variant="blur" className="text-center mb-16">
-        <p className="font-script text-4xl text-gold-deep mb-2">memórias</p>
+        <p className="font-display text-[10px] tracking-[0.5em] text-gold-deep/80 mb-3">
+          ENSAIO
+        </p>
+        <p className="font-script text-4xl text-gold-deep mb-2">retratos</p>
         <div className="gold-divider w-24 mx-auto" />
       </Reveal>
 
