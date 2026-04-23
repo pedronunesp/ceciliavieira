@@ -12,7 +12,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
 
   // Auto open after 2s
   useEffect(() => {
-    const t = setTimeout(() => triggerOpen(), 2500); // 2.5s gives time to read
+    const t = setTimeout(() => triggerOpen(), 1000); // 1s wait before opening
     return () => clearTimeout(t);
   }, []);
 
