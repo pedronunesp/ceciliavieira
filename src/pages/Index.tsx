@@ -1,16 +1,47 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect, useState } from "react";
+import { Envelope } from "@/components/Envelope";
+import { Hero } from "@/components/Hero";
+import { Gallery } from "@/components/Gallery";
+import { Storytelling } from "@/components/Storytelling";
+import { EventDetails } from "@/components/EventDetails";
+import { Actions } from "@/components/Actions";
+import { Finale } from "@/components/Finale";
+import { Particles } from "@/components/Particles";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [opened, setOpened] = useState(false);
+
+  useEffect(() => {
+    if (opened) {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [opened]);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main className="relative min-h-screen paper-texture">
+      {!opened && <Envelope onOpened={() => setOpened(true)} />}
+
+      {opened && <Particles count={30} />}
+
+      <div
+        className={`transition-all duration-1000 ${
+          opened ? "opacity-100 blur-0" : "opacity-0 blur-md"
+        }`}
+      >
+        <Hero />
+        <Gallery />
+        <Storytelling />
+        <EventDetails />
+        <Actions />
+        <Finale />
+      </div>
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
