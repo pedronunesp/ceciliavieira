@@ -42,7 +42,7 @@ jobs:
         
       - name: Build
         # Sets the base path to the repository name if it's not a user/org page
-        run: npx vite build --base=/${{ github.event.repository.name }}/
+        run: npx vite build --base=./
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
