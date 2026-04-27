@@ -39,7 +39,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
       className={`fixed inset-0 z-50 transition-opacity duration-700 ${
         isRising ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
-      style={{ background: "radial-gradient(ellipse at top, hsl(350 55% 94%) 0%, hsl(350 45% 90%) 60%, hsl(350 40% 86%) 100%)" }}
+      style={{ background: "radial-gradient(ellipse at top, hsla(349, 90%, 89%, 1.00) 0%, hsl(350 45% 90%) 60%, hsl(350 40% 86%) 100%)" }}
     >
       {/* Ambient golden glow */}
       <div
