@@ -87,7 +87,7 @@ export const Gallery = () => {
                 <Reveal variant="blur">
                   <div className="gold-divider w-20 mx-auto mb-8" />
                   <p className="font-serif-elegant italic text-2xl text-ink/80 leading-relaxed">
-                    "venha celebrar comigo esse dia tao especial"
+                    "venha celebrar comigo esse dia tão especial"
                   </p>
                 </Reveal>
               </div>
