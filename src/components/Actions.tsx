@@ -5,8 +5,7 @@ const buttons = [
   {
     icon: Heart,
     label: "Confirmar Presença",
-    sub: "via WhatsApp",
-    href: "https://wa.me/5511999999999?text=Ol%C3%A1!%20Confirmo%20presen%C3%A7a%20nos%2015%20anos%20da%20Cec%C3%ADlia%20%E2%9C%A8",
+    href: "https://assessoriavip.com.br/rsvpUnico/393ee9d0-eb54-11f0-a863-c3cf118e7cbf",
     primary: true,
   },
   {

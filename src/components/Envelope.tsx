@@ -163,7 +163,7 @@ export const Envelope = ({ onOpened }: EnvelopeProps) => {
                 className="font-display text-xs tracking-[0.4em] text-gold-deep mt-2 uppercase text-center w-full font-bold"
                 style={{ textShadow: "1px 1px 0px rgba(255,255,255,0.4)" }}
               >
-                Te convida
+                15 anos
               </p>
             </div>
           </div>
