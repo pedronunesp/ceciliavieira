@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 import floral from "@/assets/floral-corner.png";
 
 const details = [
-  { icon: Calendar, label: "Sábado", value: "29 de Maio, 2026", sub: "das 22:00 às 04:00" },
+  { icon: Calendar, label: "Quinta-feira", value: "28 de Maio, 2026", sub: "das 22:00 às 04:00" },
   { icon: MapPin, label: "Local", value: "Toth Eventos", sub: "Av. Otacílio Negrão de Lima, 7200 - Bandeirantes (Pampulha)" },
   { icon: Shirt, label: "Dress Code", value: "Esporte Fino", sub: "evite trajes em tons rosa, pois é a cor exclusiva da aniversariante" },
 ];
