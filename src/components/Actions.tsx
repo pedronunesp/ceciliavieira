@@ -5,7 +5,7 @@ const buttons = [
   {
     icon: Heart,
     label: "Confirmar Presença",
-    sub: "favor confirmar até 05 de maio",
+    sub: "favor confirmar até 08 de maio",
     href: "https://assessoriavip.com.br/rsvpUnico/393ee9d0-eb54-11f0-a863-c3cf118e7cbf",
     primary: true,
   },
